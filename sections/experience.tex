@@ -1,0 +1,47 @@
+% --- STRUCTURE: EXPERIENCE ---
+\newcommand{\experienceentry}[6]{%
+  \spacebeforeentry
+  \begin{tabular*}{\textwidth}{@{} >{\raggedright}p{0.68\textwidth} >{\raggedright}p{0.14\textwidth} >{\raggedright\arraybackslash}p{0.13\textwidth} @{}}
+    % Column 1: Role & Company
+    \textbf{Role:} \textit{#1} \par
+    \textbf{Company:} \textit{#2, #3}
+    & % Column 2: Start Date
+    \textbf{Since:} \textit{#4}
+    & % Column 3: End Date
+    \textbf{Until:} \textit{#5}
+  \end{tabular*}
+  \par\nopagebreak
+  \vspace{0.5ex}
+  \begin{itemize}
+    \renewcommand{\labelitemi}{--}
+    \setlength{\itemsep}{0pt}
+    \setlength{\parskip}{0pt}
+    #6 % List content
+  \end{itemize}
+  \spaceafterentry
+}
+
+
+% --- WORK EXPERIENCE ---
+\resumesection{Work Experience}
+
+\experienceentry
+  {Senior AI Researcher} % {1: Job Title}
+  {QuantumLeap AI} % {2: Company}
+  {Berlin, Germany} % {3: Location}
+  {Mar 2021} % {4: Start Date}
+  {Present} % {5: End Date}
+  { % {6: Description}
+    \item Formulated a novel algorithm for 3D object tracking in sparse point clouds.
+    \item Published a first-author conference paper on the tracking algorithm.
+  }
+\experienceentry
+  {Machine Learning Intern} % {1: Job Title}
+  {Data Insights Ltd.} % {2: Company}
+  {Berlin, Germany} % {3: Location}
+  {Jun 2019} % {4: Start Date}
+  {Aug 2019} % {5: End Date}
+  { % {6: Description}
+    \item Implemented and benchmarked time-series forecasting models (ARIMA, LSTM).
+    \item Evaluated data preprocessing techniques to optimize model performance.
+  }

@@ -1,0 +1,63 @@
+% --- STRUCTURE: EDUCATION ---
+% {Degree} {Univ} {Loc} {Start} {End} {GPA} {Scale} {Thesis} {Other Bullets}
+\newcommand{\educationentry}[9]{%
+  \spacebeforeentry
+  \begin{tabular*}{\textwidth}{@{} >{\raggedright}p{0.68\textwidth} >{\raggedright}p{0.14\textwidth} >{\raggedright\arraybackslash}p{0.13\textwidth} @{}}
+    % Column 1: Degree & University
+    \textbf{Degree:} \textit{#1} \par
+    \textbf{University:} \textit{#2, #3} \par
+    & % Column 2: Start Date
+    \textbf{Since:} \textit{#4}
+    & % Column 3: End Date
+    \textbf{Until:} \textit{#5}
+  \end{tabular*}
+  \par\nopagebreak
+  \vspace{0.5ex} 
+  
+  % --- Thesis Item Definition ---
+  \def\thesisitem{}
+  \def\argtest{#8}
+  \ifx\argtest\empty
+  \else
+    \def\thesisitem{\item \textbf{Thesis:} \textit{#8}}
+  \fi
+  % --- End Thesis Item ---
+
+  \begin{itemize}
+    \renewcommand{\labelitemi}{--}
+    \setlength{\itemsep}{0pt}
+    \setlength{\parskip}{0pt}
+    \item \textbf{CGPA:} \textit{#6} / \textit{#7} 
+    \thesisitem 
+    #9 % List content (other bullets)
+  \end{itemize}
+  \spaceafterentry
+}
+
+
+% --- EDUCATION ---
+\resumesection{Education}
+
+\educationentry
+  {M.Sc. in Robotics} % {1: Degree}
+  {KTH Royal Institute of Technology} % {2: University}
+  {Sweden} % {3: Location}
+  {Sep 2018} % {4: Start Date}
+  {Jun 2020} % {5: End Date}
+  {4.8} % {6: Grade}
+  {5.0} % {7: Scale}
+  {"Sim-to-Real Transfer for 6-DOF Grasping"} % {8: Thesis}
+  {} % {9: Other Bullets}
+  
+\educationentry
+  {B.Sc. in Computer Science} % {1: Degree}
+  {University of Berlin} % {2: University}
+  {Germany} % {3: Location}
+  {Sep 2014} % {4: Start Date}
+  {Jun 2018} % {5: End Date}
+  {1.3} % {6: Grade}
+  {1.0} % {7: Scale}
+  {} % {8: Thesis}
+  { % {9: Other Bullets}
+    \item Designed a pathfinding visualizer using Dijkstra's algorithm.
+  }

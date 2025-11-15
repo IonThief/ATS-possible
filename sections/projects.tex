@@ -1,0 +1,48 @@
+% --- STRUCTURE: PROJECTS ---
+\newcommand{\projectentry}[6]{%
+  \spacebeforeentry
+  \begin{tabular*}{\textwidth}{@{} >{\raggedright}p{0.68\textwidth} >{\raggedright}p{0.14\textwidth} >{\raggedright\arraybackslash}p{0.13\textwidth} @{}}
+    % Column 1: Project Name
+    \textbf{Project:} \href{https://www.#4}{\textit{#1}}
+    & % Column 2: Start Date
+    \textbf{Since:} \textit{#2}
+    & % Column 3: End Date
+    \textbf{Until:} \textit{#3}
+  \end{tabular*}
+  \par\nopagebreak
+  \vspace{0.5ex}
+  \begin{itemize}
+    \renewcommand{\labelitemi}{--}
+    \setlength{\itemsep}{0pt}
+    \setlength{\parskip}{0pt}
+    \item \textbf{Tech Stack:} \textit{#5}
+    #6 % List content
+  \end{itemize}
+  \spaceafterentry
+}
+
+% --- PROJECTS ---
+\resumesection{Projects}
+
+\projectentry
+  {RoboSwarm} % {1: Project Name}
+  {May 2021} % {2: Start Date}
+  {Present} % {3: End Date}
+  {github.com/ev-reed-robotics/roboswarm} % {4: URL}
+  {ROS2, Python, PyTorch, Isaac Sim} % {5: Tech Stack}
+  { % {6: Description}
+    \item Calibrated simulated LiDAR sensor models for realistic noise profiles.
+    \item Implemented a decentralized navigation stack for multi-robot exploration.
+    \item Reconstructed occupancy grids from fused sensor data.
+    \item Designing a DRL policy for swarm coordination.
+  }
+\projectentry
+  {AI4Sim} % {1: Project Name}
+  {Jan 2020} % {2: Start Date}
+  {Apr 2021} % {3: End Date}
+  {ai4sim.org} % {4: URL}
+  {Unreal Engine, C++, NumPy} % {5: Tech Stack}
+  { % {6: Description}
+    \item Fused simulated radar data with 3D point clouds.
+    \item Implemented RANSAC-based ground plane removal.
+  }

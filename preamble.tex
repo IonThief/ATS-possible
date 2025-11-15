@@ -1,0 +1,41 @@
+% --- CORE PACKAGES ---
+\usepackage{geometry}    % Page layout and margins (
+\usepackage[T1]{fontenc} % Font encoding
+\usepackage{parskip}     % Use vertical space between paragraphs, not indentation
+\usepackage{hyperref}    % Clickable links 
+\usepackage{ragged2e}    % For \RaggedRight alignment
+\usepackage{tabularx}    % Advanced table environments
+\usepackage{array}       % For custom table column types 
+\usepackage{xparse}      % For creating new commands 
+
+% --- MARGINS ---
+\geometry{top=1.0cm, bottom=1.5cm, left=1.0cm, right=1.0cm} % Set page margins
+
+% --- FONT CONFIGURATION ---
+\usepackage{newtxtext} 
+\usepackage{newtxmath} 
+% --- FONT SIZE DEFINITIONS ---
+\newcommand{\basefontsize}{\normalsize}
+\newcommand{\resumefont}{\basefontsize}
+\newcommand{\namefont}[1]{{\Huge\bfseries #1}}  % Main name
+\newcommand{\contactfont}{\small}               % Header contact info
+\newcommand{\sectionfont}{\Large}               % Section titles
+\newcommand{\subsectionfont}{\normalsize}       % Subsection titles
+
+% --- SPACING DEFINITIONS ---
+% Entry spacing
+\newcommand{\spacebeforeentry}{\par\vspace{0.05ex}} 
+\newcommand{\spaceafterentry}{\par\vspace{0.5ex}} 
+% Section spacing
+\newcommand{\spacebeforesection}{\par\vspace{0.5ex}} 
+\newcommand{\spaceaftersectiontitle}{\par\vspace{0.5ex}} 
+\newcommand{\spaceaftersection}{\par\vspace{0.5ex}} 
+
+% --- Section ---
+\newcommand{\resumesection}[1]{%
+  \spacebeforesection
+  {\sectionfont\bfseries #1} % Section title
+  \spaceaftersectiontitle
+  \hrule 
+  \spaceaftersection
+}
